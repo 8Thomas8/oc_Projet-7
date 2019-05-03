@@ -1,0 +1,133 @@
+<div id="generalContent">
+  <!-- Add button -->
+  <div id="left">
+    <i id="addButton" (click)="toggleAddRestaurant()" *ngIf="loginStatut" class="fa fa-plus-square"></i>
+    <p id="addText">Ajouter un restaurant</p>
+  </div>
+
+  <!-- Filter -->
+  <div id="miniFilter">
+    <button id="buttonFilter">Filtre</button>
+    <div id="filter">
+      <div id='filterValues'>
+        <form id='minFilter'>
+          <p class="textFilter">Filtre minimal</p>
+          <input type="radio" id='min1' name='min' value='1' [(ngModel)]="minFilter">
+          <label for='min1'>
+            <div class="ratingArea">
+              <div class="bgRating">
+                <img src="./assets/img/0-5.png" alt="rating stars0" />
+              </div>
+              <div class="selectedRating selectedRating1">
+                <img src="./assets/img/5-5.png" alt="rating stars5" />
+              </div>
+            </div>
+          </label>
+          <br />
+          <input type="radio" id='min2' name='min' value='2' [(ngModel)]="minFilter">
+          <label for='min2'>            <div class="ratingArea">
+              <div class="bgRating">
+                <img src="./assets/img/0-5.png" alt="rating stars0" />
+              </div>
+              <div class="selectedRating selectedRating2">
+                <img src="./assets/img/5-5.png" alt="rating stars5" />
+              </div>
+            </div></label>
+          <br />
+          <input type="radio" id='min3' name='min' value='3' [(ngModel)]="minFilter">
+          <label for='min3'>            <div class="ratingArea">
+              <div class="bgRating">
+                <img src="./assets/img/0-5.png" alt="rating stars0" />
+              </div>
+              <div class="selectedRating selectedRating3">
+                <img src="./assets/img/5-5.png" alt="rating stars5" />
+              </div>
+            </div></label>
+          <br />
+          <input type="radio" id='min4' name='min' value='4' [(ngModel)]="minFilter">
+          <label for='min4'>            <div class="ratingArea">
+              <div class="bgRating">
+                <img src="./assets/img/0-5.png" alt="rating stars0" />
+              </div>
+              <div class="selectedRating selectedRating4">
+                <img src="./assets/img/5-5.png" alt="rating stars5" />
+              </div>
+            </div></label>
+          <br />
+          <input type="radio" id='min5' name='min' value='5' [(ngModel)]="minFilter">
+          <label for='min5'>            <div class="ratingArea">
+              <div class="bgRating">
+                <img src="./assets/img/0-5.png" alt="rating stars0" />
+              </div>
+              <div class="selectedRating selectedRating5">
+                <img src="./assets/img/5-5.png" alt="rating stars5" />
+              </div>
+            </div>
+          </label>
+        </form>
+
+        <hr id="verticalHr" />
+
+        <form id='maxFilter'>
+            <p class="textFilter">Filtre maximal</p>
+            <input type="radio" id='max1' name='max' value='1' [(ngModel)]="maxFilter">
+            <label for='max1'>
+              <div class="ratingArea">
+                <div class="bgRating">
+                  <img src="./assets/img/0-5.png" alt="rating stars0" />
+                </div>
+                <div class="selectedRating selectedRating1">
+                  <img src="./assets/img/5-5.png" alt="rating stars5" />
+                </div>
+              </div>
+            </label>
+            <br />
+            <input type="radio" id='max2' name='max' value='2' [(ngModel)]="maxFilter">
+            <label for='max2'>            <div class="ratingArea">
+                <div class="bgRating">
+                  <img src="./assets/img/0-5.png" alt="rating stars0" />
+                </div>
+                <div class="selectedRating selectedRating2">
+                  <img src="./assets/img/5-5.png" alt="rating stars5" />
+                </div>
+              </div></label>
+            <br />
+            <input type="radio" id='max3' name='max' value='3' [(ngModel)]="maxFilter">
+            <label for='max3'>            <div class="ratingArea">
+                <div class="bgRating">
+                  <img src="./assets/img/0-5.png" alt="rating stars0" />
+                </div>
+                <div class="selectedRating selectedRating3">
+                  <img src="./assets/img/5-5.png" alt="rating stars5" />
+                </div>
+              </div></label>
+            <br />
+            <input type="radio" id='max4' name='max' value='4' [(ngModel)]="maxFilter">
+            <label for='max4'>            <div class="ratingArea">
+                <div class="bgRating">
+                  <img src="./assets/img/0-5.png" alt="rating stars0" />
+                </div>
+                <div class="selectedRating selectedRating4">
+                  <img src="./assets/img/5-5.png" alt="rating stars5" />
+                </div>
+              </div></label>
+            <br />
+            <input type="radio" id='max5' name='max' value='5' [(ngModel)]="maxFilter">
+            <label for='max5'>            <div class="ratingArea">
+                <div class="bgRating">
+                  <img src="./assets/img/0-5.png" alt="rating stars0" />
+                </div>
+                <div class="selectedRating selectedRating5">
+                  <img src="./assets/img/5-5.png" alt="rating stars5" />
+                </div>
+              </div></label>
+            </form>
+      </div>
+
+      <div id="buttonArea">
+        <button id="okButton" (click)="applyFilter()">Ok</button>
+        <button id="resetButton" (click)="resetFilter()">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div id="mapContainer">
+  <button id="backOnUser" (click)="resetCenter()"><i class="fa fa-map-marker"></i></button>
+  <!-- Call the map -->
+  <agm-map (idle)='setCenterWhenIdle()' (centerChange)='centerChange($event)' id='map' (mapClick)="placeRestaurant($event)" [latitude]="selectedCenter[0]" [longitude]="selectedCenter[1]"
+    [zoom]="selectedCenter[2]">
+    <!-- Call user marker -->
+    <agm-marker [latitude]="userLat" [longitude]="userLng" [label]="userLabel">
+      <agm-info-window [disableAutoPan]="false">
+        {{ userInfoWindow }}
+      </agm-info-window>
+    </agm-marker>
+    <!-- Call each restaurant marker -->
+    <agm-marker *ngFor="let restaurant of restaurants" [latitude]="restaurant.lat" [longitude]="restaurant.long"
+      [iconUrl]="restaurantIcon">
+      <agm-info-window [disableAutoPan]="false" [isOpen]="true">
+        <p id="infoWindowText">{{ restaurant.restaurantName }}</p>
+        <div id="rating">
+          <div id="ratingBg">
+            <img src="./assets/img/0-5.png" alt="rating stars0" class="ratingImg" />
+          </div>
+          <div id="ratingActual" [style.width]="restaurant.averageRating | ratingPipe: 'infowindow'">
+            <img src="./assets/img/5-5.png" alt="rating stars5" class="ratingImg" id="actualRatingImg" />
+          </div>
+        </div>
+      </agm-info-window>
+    </agm-marker>
+  </agm-map>
+</div>

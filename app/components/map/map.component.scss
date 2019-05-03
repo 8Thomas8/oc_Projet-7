@@ -1,0 +1,61 @@
+#mapContainer {
+  margin-left: -8px;
+  margin-right: -8px;
+  height: 100%;
+  position: relative;
+}
+
+#backOnUser {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  right: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  background-color: #72b97c;
+  border: 2px rgba(0,0,0,0) solid;
+  box-shadow: 2px 2px 2px grey;
+  font-weight: bold;
+}
+
+#backOnUser:hover {
+  border: 2px rgba(0,0,0,0.3) solid;
+  box-shadow: none;
+}
+
+#backOnUser i {
+  padding: 10px;
+}
+
+agm-map {
+  width: 100%;
+  height: 100%;
+}
+
+agm-info-window {
+  position: relative;
+}
+
+p {
+  color: #72b97c;
+  font-family: 'Robot', sans-serif;
+  font-weight: bold;
+}
+
+ #rating {
+  position: absolute;
+  bottom: 15px;
+}
+
+#ratingBg {
+  width: 100%;
+  position: absolute;
+}
+
+#ratingActual {
+  position: absolute;
+  overflow: hidden;
+}

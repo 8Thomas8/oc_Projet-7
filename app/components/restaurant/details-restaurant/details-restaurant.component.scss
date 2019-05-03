@@ -1,0 +1,99 @@
+#generalContent {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+#imgDiv img {
+  width: 100% !important;
+  border-bottom: 2px rgba(0, 0, 0, 0.144) solid;
+}
+
+#contentDiv {
+  padding-left: 10px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 0 0 10px 0;
+}
+
+h4 {
+  margin-bottom: 5px;
+}
+
+#ratingAverageArea {
+  float: right;
+  width: 100px;
+}
+
+#bgAverageRating {
+  width: 100px;
+  position: absolute;
+}
+
+#actualAverageRating {
+  position: absolute;
+  overflow: hidden;
+}
+
+#ratingArea {
+  position: absolute;
+  width: 53px;
+}
+
+#bgRating {
+  width: 100%;
+  position: absolute;
+}
+
+#actualRating {
+  position: absolute;
+  overflow: hidden;
+}
+
+.divComment {
+  padding: 0px 10px 0px 0px;
+}
+
+
+#closeButton {
+  background: rgb(216, 112, 138);
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  color: white;
+  border: 2px white solid;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0 0 1px 0;
+  cursor: pointer;
+}
+
+#closeButton:hover {
+  background: white;
+  color: rgb(216, 112, 138);
+  border: 2px rgb(216, 112, 138) solid;
+}
+
+#commentButton {
+background: #72b97c;
+border-radius: 3px;
+color: white;
+border: 2px white solid;
+position: absolute;
+top: 120px;
+right: 10px;
+cursor: pointer;
+font-weight: bold;
+font-size: 1em;
+}
+
+#commentButton:hover {
+  background: white;
+  color: #72b97c;
+  border: 2px #72b97c solid;
+}

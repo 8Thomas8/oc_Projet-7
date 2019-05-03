@@ -1,0 +1,17 @@
+<div id="generalContent">
+  <div>
+    <app-toolbar [loginStatut]="loginStatut"></app-toolbar>
+  </div>
+  <div id="content">
+    <app-add-restaurant id="addComponent" *ngIf="toggleStatut[0]">
+    </app-add-restaurant>
+    <app-details-restaurant id="detailsComponent" *ngIf="toggleStatut[1]" [loginStatut]="loginStatut">
+    </app-details-restaurant>
+    <app-search-restaurant id="searchComponent" *ngIf="toggleStatut[2]">
+    </app-search-restaurant>
+    <app-map id="mapComponent">
+    </app-map>
+  </div>
+  <app-list-restaurants>
+  </app-list-restaurants>
+</div>

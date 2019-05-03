@@ -1,0 +1,31 @@
+<div id="content">
+
+  <div id="restCarousel">
+    <div *ngFor="let restaurant of restaurants" class="restCard" (click)="onSelect(restaurant)">
+      <div class="restInfoBg" [ngStyle]="{'background-image':'url('+restaurant.streetview+')'}">
+        <div class="restInfoBg2">
+          <div class="restInfo">
+            <h2>{{ restaurant.restaurantName }}
+              <div id="ratingArea">
+                <div id="bgAverageRating">
+                  <img src="./assets/img/0-5.png" alt="rating stars0" class="imgAverageRating" />
+                </div>
+                <div id="actualRating" [style.width]="restaurant.averageRating | ratingPipe: 'averageStars'">
+                  <img src="./assets/img/5-5.png" alt="rating stars5" class="imgAverageRating"
+                    id="imgActualRating" />
+                </div>
+              </div>
+            </h2>
+            <p id='address'>{{ restaurant.address }}</p>
+            <p>{{ restaurant.type }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id='left' (click)='leftScroll()'><img src='./assets/img/left.png'
+      alt='left' /></div>
+  <div id="right" (click)='rightScroll()'><img src='./assets/img/right.png'
+      alt='right' /></div>
+
+</div>

@@ -1,0 +1,123 @@
+#generalContent {
+  height: 100%;
+}
+
+#content {
+  display: flex;
+}
+
+app-add-restaurant {
+  width: 20%;
+  height: calc(100vh - (76px + 35px + 21vh));
+  overflow-y: scroll;
+  z-index: 2;
+  border-top: 2px rgba(93, 170, 122, 0.4) solid;
+  border-right: 2px rgba(93, 170, 122, 0.4) solid;
+  margin-left: -8px;
+  margin-right: 8px;
+  box-shadow: 20px 01px 10px -10px rgba(0, 0, 0, 0.7);
+}
+
+app-details-restaurant {
+  width: 20%;
+  height: calc(100vh - (76px + 35px + 21vh));
+  overflow-y: scroll;
+  border-top: 2px rgba(93, 170, 122, 0.4) solid;
+  border-right: 2px rgba(93, 170, 122, 0.4) solid;
+  margin-left: -8px;
+  margin-right: 8px;
+  box-shadow: 20px 01px 10px -10px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+app-search-restaurant {
+  width: 20%;
+  height: calc(100vh - (76px + 35px + 21vh));
+  overflow-y: scroll;
+  border-top: 2px rgba(93, 170, 122, 0.4) solid;
+  border-right: 2px rgba(93, 170, 122, 0.4) solid;
+  margin-left: -8px;
+  margin-right: 8px;
+  box-shadow: 20px 01px 10px -10px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+app-list-restaurants {
+  z-index: 3;
+}
+
+app-map {
+  width: 100%;
+  height: calc(100vh - (76px + 35px + 21vh));
+}
+
+@media all and (min-width: 1024px) and (max-width: 1650px)
+{
+  app-map {
+    height: calc(100vh - (78px + 35px + 21vh));
+  }
+
+  app-add-restaurant {
+    width: 35%;
+    height: calc(100vh - (78px + 35px + 21vh));
+
+  }
+  
+  app-details-restaurant {
+    width: 35%;
+    height: calc(100vh - (78px + 35px + 21vh));
+  }
+  
+  app-search-restaurant {
+    width: 35%;
+    height: calc(100vh - (78px + 35px + 21vh));
+  }
+}
+
+@media all and (max-width: 1024px)
+{
+
+  app-map {
+    height: calc(100vh - (78px + 35px + 21vh));
+  }
+
+  app-add-restaurant {
+    width: 100%;
+    height: calc(100vh - (78px + 35px + 21vh));
+
+  }
+  
+  app-details-restaurant {
+    width: 100%;
+    height: calc(100vh - (78px + 35px + 21vh));
+  }
+  
+  app-search-restaurant {
+    width: 100%;
+    height: calc(100vh - (78px + 35px + 21vh));
+  }
+}
+
+  @media all and (max-width: 780px)
+{
+
+  app-map {
+    height: calc(100vh - (78px + 35px + 21vh));
+  }
+
+  app-add-restaurant {
+    width: 250%;
+    height: calc(100vh - (78px + 35px + 21vh));
+
+  }
+  
+  app-details-restaurant {
+    width: 250%;
+    height: calc(100vh - (78px + 35px + 21vh));
+  }
+  
+  app-search-restaurant {
+    width: 250%;
+    height: calc(100vh - (78px + 35px + 21vh));
+  }
+}

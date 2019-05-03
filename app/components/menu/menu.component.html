@@ -1,0 +1,40 @@
+<div id="menuContainer">
+  <!-- Menu access for mini menu -->
+  <div id="wrappedNav">
+    <div id="wrap">
+      <div href="#wrap" id="open">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="34px" height="27px" viewBox="0 0 34 27" enable-background="new 0 0 34 27" xml:space="preserve">
+          <rect fill="#fff" width="34" height="4" />
+          <rect y="11" fill="#fff" width="34" height="4" />
+          <rect y="23" fill="#fff" width="34" height="4" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <img src='./assets/img/logo.png' alt="rest'\o'\compare" id="logo">
+
+  <!-- Normal menu -->
+  <nav id="bigNav">
+    <ul id="bigNavList">
+      <li><a class="navLink" routerLink="/" title="Accueil" (click)="closeAllToggle()">Accueil</a></li>
+      <li><a class="navLink" routerLink="/" title="Recherche" (click)="toggleSearch()">Recherche</a></li>
+      <li><a class="logLink" routerLink="/login" title="Se Connecter" *ngIf="!loginStatut">Se Connecter</a></li>
+      <li><a class="logLink" title="Se déconnecter" *ngIf="loginStatut" (click)="disconnect()">{{ userPseudo }} <br/>
+        <span id="disconnect">-Déconnexion-</span></a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Mini menu -->
+<div id="miniNav">
+  <button id="closeButton"><i class="fa fa-times"></i></button>
+  <button id="firstPageButton" routerLink="/">Accueil</button>
+  <button id="searchMiniButton" routerLink="/" (click)="toggleSearch()">Recherche</button>
+  <div id="logButtons">
+    <button routerLink="/login" *ngIf="!loginStatut">Se Connecter</button>
+    <button routerLink="/" *ngIf="loginStatut" (click)="disconnect()">{{ userPseudo }}
+      <span id="miniDisconnect">(Déconnexion)</span></button>
+  </div>
+  <hr />
+</div>

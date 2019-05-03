@@ -1,0 +1,181 @@
+#content {
+  position: relative;
+  height: 20vh;
+}
+
+#restCarousel {
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: 0 -8px 0 -8px;
+  height: 20vh;
+  border-top: 1px black solid;
+  box-shadow: 0px -5px 10px rgb(73, 73, 73);
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient( rgb(112, 228, 156), rgb(60, 109, 79));
+  scroll-behavior: smooth;
+}
+
+.restCard {
+  border-right: 1px black solid;
+  height: inherit;
+  min-height: 142px;
+  min-width: 20%;
+  background: rgb(106, 143, 211);
+  cursor: pointer;
+}
+
+.restInfoBg {
+  height: inherit;
+  min-height: 142px;
+  min-width: 20%;
+  position: absolute;
+  bottom: 0;
+}
+
+.restInfoBg2 {
+  height: 100%;
+  min-height: 142px;
+  min-width: 20%;
+  background: linear-gradient(to top, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0.4));
+}
+
+.restInfo {
+  margin-left: 20px;
+  margin-top: 45px;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+}
+
+#ratingArea {
+  position: absolute;
+  width: 53px;
+  top: 3px;
+  right: -50px;
+}
+
+#bgAverageRating {
+  width: 100%;
+  position: absolute;
+}
+
+#actualRating {
+  position: absolute;
+  overflow: hidden;
+}
+
+.restInfo p {
+  font-size: 0.9em;
+}
+
+#address {
+  margin-top: -25px;
+  margin-left: 5px;
+}
+
+#scroll {
+  z-index: 3;
+}
+
+#left,
+#right {
+  cursor: pointer;
+  position: absolute;
+  bottom: calc(20vh - 44px);
+}
+
+#right {
+  right: 0;
+}
+
+
+#left img,
+#right img {
+  width: 32px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding: 4px;
+  margin: 0 -8px;
+}
+
+#left img:hover,
+#right img:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media all and (min-width: 1365px) and (max-width: 1695px)
+{
+  .restCard {
+    min-width: 25%;
+  }
+  
+  .restInfoBg {
+    min-width: 25%;
+  }
+  
+  .restInfoBg2 {
+    min-width: 25%;
+  }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1365px)
+{
+  .restCard {
+    min-width: 33.3%;
+  }
+  
+  .restInfoBg {
+    min-width: 33.3%;
+  }
+  
+  .restInfoBg2 {
+    min-width: 33.3%;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 1024px)
+{
+  .restCard {
+    min-width: 50%;
+  }
+  
+  .restInfoBg {
+    min-width: 50%;
+  }
+  
+  .restInfoBg2 {
+    min-width: 50%;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 800px)
+{
+  h2 {
+    font-size: 1em;
+  }
+
+  .restInfo #address {
+    margin-top: -16px;
+  }
+
+  .restInfo p {
+    font-size: 0.7em;
+  }
+}
+
+@media all and (max-width: 480px)
+{
+  .restCard {
+    min-width: 100%;
+  }
+  
+  .restInfoBg {
+    min-width: 100%;
+  }
+  
+  .restInfoBg2 {
+    min-width: 100%;
+  }
+}

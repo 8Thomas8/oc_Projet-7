@@ -1,0 +1,78 @@
+#content {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+h2 {
+  padding-top: 15px;
+}
+
+#formContent {
+  margin-top: 15%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 3px;
+}
+
+#name, #address {
+  margin: 10px auto;
+  border: 1px white solid;
+  background: #f2f2f2;
+  height: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  padding: 15px;
+}
+
+.validButton {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #72b97c;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.validButton:hover {
+  background: #54b962;
+}
+
+fieldset:last-child {
+  margin-top:40px;
+}
+
+#closeButton {
+  background: rgb(216, 112, 138);
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  color: white;
+  border: 2px white solid;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  padding: 0 0 0 0;
+  cursor: pointer;
+}
+
+#closeButton:hover {
+  background: white;
+  color: rgb(216, 112, 138);
+  border: 2px rgb(216, 112, 138) solid;
+}
+
+#searchError {
+  display: none;
+  color: rgb(216, 112, 138);
+}

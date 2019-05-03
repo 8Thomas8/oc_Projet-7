@@ -1,0 +1,41 @@
+<div id="generalContent">
+  <div id="imgDiv">
+    <img [src]="selectedRestaurant.streetview" alt='StreetView' id="streetView" />
+  </div>
+  <div id="ratingAverageArea">
+    <div id="bgAverageRating">
+      <img src="./assets/img/detailAverage0.png" alt="rating stars0" />
+    </div>
+    <div id="actualAverageRating" [style.width]="selectedRestaurant.averageRating | ratingPipe: 'averageStars'">
+      <img src="./assets/img/detailAverage5.png" alt="rating stars5" />
+    </div>
+  </div>
+  <div id="contentDiv">
+    <div id="title">
+      <h2>{{ selectedRestaurant.restaurantName }}</h2>
+
+      <h3>{{ selectedRestaurant.type }}</h3>
+      <h3>{{ selectedRestaurant.address }}</h3>
+    </div>
+
+    <h4>Notes: </h4>
+    <div *ngFor="let rating of selectedRestaurant.ratings" class="divComment">
+
+      <div id="ratingArea">
+        <div id="bgRating">
+          <img src="./assets/img/0-5.png" alt="rating stars0" />
+        </div>
+        <div id="actualRating" [style.width]="rating.stars | ratingPipe: '1rating'">
+          <img src="./assets/img/5-5.png" alt="rating stars5" />
+        </div>
+      </div><br />
+
+      {{ rating.comment }}<br />
+      <br /><br />
+    </div>
+
+  </div>
+
+  <button id="commentButton" routerLink="/add-comment" *ngIf="loginStatut">Noter</button>
+  <button id="closeButton" (click)="closeToggle()"><i class="fa fa-times"></i></button>
+</div>

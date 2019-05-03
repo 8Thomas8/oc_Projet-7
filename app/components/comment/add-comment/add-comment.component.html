@@ -1,0 +1,18 @@
+<div id="content">
+  <!-- If there is no selected restaurant -->
+  <div *ngIf="!selectedRestaurant">
+    <p>Sélectionnez d'abord un restaurant sur la carte</p>
+    <button routerLink="/nearme">Retour à la carte</button>
+  </div>
+
+  <!-- If there is a selected restaurant -->
+  <fieldset *ngIf="selectedRestaurant">
+    <h2>{{ selectedRestaurant.restaurantName }}</h2>
+    <h4>Ajouter un commentaire</h4><br />
+    <label for="stars">Note sur 5:</label>
+    <input type="number" name="stars" id="stars" min="1" max="5" [(ngModel)]="starsVal" required />
+    <label for="comment">Commentaire</label><br />
+    <textarea name="comment" id="comment" [(ngModel)]="commentVal" required></textarea>
+    <button (click)="onAdd()">Ajouter</button>
+  </fieldset>
+</div>

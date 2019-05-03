@@ -1,0 +1,22 @@
+<div id="content">
+  <div class="login-page">
+    <div class="form">
+      <!-- If the user wants to register new account -->
+      <form class="register-form" *ngIf="toggleRegister" >
+        <input type="text" name="newPseudo" id="newPseudo" placeholder="Pseudo" [(ngModel)]="pseudoVal" />
+        <input type="password" name="newPass" id="newPass" placeholder="Mot de passe" [(ngModel)]="passVal" />
+        <input type="mail" name="newMail" id="newMail" placeholder="Adresse email" [(ngModel)]="mailVal" />
+        <button (click)="onNewLogIn()">Créer un compte</button>
+        <p class="message">Déjà enregistré ? <span (click)='manageToggleRegister()' id="messageLink1">Connectez-vous</span></p>
+      </form>
+
+      <!-- If the user want to log in -->
+      <form class="login-form"  *ngIf="!toggleRegister">
+        <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" [(ngModel)]="pseudoVal" />
+        <input type="password" name="pass" id="pass" placeholder="Mot de passe" [(ngModel)]="passVal" />
+        <button (click)="onLogIn()">Connexion</button>
+        <p class="message">Pas de compte ? <span (click)='manageToggleRegister()' id="messageLink2">Créez un compte</span></p>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div id="content">
+
+  <h2>Rechercher un restaurant</h2>
+
+  <div id="formContent">
+    <fieldset>
+      <input type="text" name="name" id="name" placeholder="Nom du restaurant" [(ngModel)]="nameVal" />
+      <p>ou</p>
+      <input type="text" name="address" id="address" [(ngModel)]="addressVal" placeholder="Adresse du restaurant" />
+      <input type="submit" class="validButton" value="Valider" (click)="search()" />
+    </fieldset>
+
+    <p id='searchError'>Erreur, aucun restaurant ne correspond à la recherche.</p>
+  </div>
+
+  <button id="closeButton" (click)="closeToggle()"><i class="fa fa-times"></i></button>
+</div>

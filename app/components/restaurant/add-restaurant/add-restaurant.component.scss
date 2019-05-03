@@ -1,0 +1,84 @@
+#addContent {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+}
+
+#formContent {
+  width: 70%;
+  margin: auto;
+  position: relative;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  min-width: 95%;
+  max-width: 95%;
+}
+
+fieldset h3 {
+  color: #72b97c;
+  margin: 0;
+  margin-left: -10px;
+}
+
+#secondFieldset {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#name, #address, #type, #stars, #comment {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#validButton {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #72b97c;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+#validButton:hover {
+  background: #54b962;
+}
+
+#closeButton {
+  background: rgb(216, 112, 138);
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+  color: white;
+  border: 2px white solid;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  padding: 0 0 0 0;
+  cursor: pointer;
+}
+
+#closeButton:hover {
+  background: white;
+  color: rgb(216, 112, 138);
+  border: 2px rgb(216, 112, 138) solid;
+}

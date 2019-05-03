@@ -1,0 +1,271 @@
+#menuContainer {
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(rgb(60, 109, 79), rgb(112, 228, 156));
+  display: flex;
+  justify-content: space-between;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  height: 80px;
+  box-shadow: 0px 5px 5px grey;
+}
+
+#logo {
+  margin-top: 5px;
+  height: 70px;
+}
+
+#bigNav {
+  margin-right: 200px;
+  position: absolute;
+  top: -16px;
+  right: 0;
+}
+
+ul {
+  width: 450px;
+  list-style-type: none;
+  display: flex;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrappedNav {
+  display: none;
+}
+
+#miniNav {
+  display: none;
+  margin: 10px auto 0px auto;
+  width: 80%;
+}
+
+.navLink,
+.logLink {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(203, 243, 218);
+  display: block;
+  text-decoration: none;
+  padding: 30px 0 30px 0;
+  width: 160px;
+  height: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.navLink:hover {
+  background-color: white;
+  color: rgb(93, 170, 122);
+}
+
+#disconnect {
+  font-size: 0.7em;
+}
+
+#miniDisconnect {
+  font-size: 0.8em;
+}
+
+.logLink:hover {
+  background-color: white;
+  color: rgb(93, 148, 170);
+  overflow: hidden;
+}
+
+@media all and (max-width: 1024px) {
+  #bigNav {
+    display: none;
+  }
+
+  #miniNav button,
+  #logButtons button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    width: 33.33%;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px #72b97c solid;
+    background: white;
+    color: #72b97c;
+    margin: 2px;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  #logButtons {
+    margin: 5px auto;
+    width: 100%;
+    display: flex;
+  }
+
+  #miniNav #closeButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px #f58282 solid;
+    color: #f58282;
+    transition: all 0.5s;
+    position: absolute;
+    right: 10px;
+  }
+
+  #miniNav button:hover {
+    border: 1px white solid;
+    background: #72b97c;
+    color: white;
+  }
+
+
+  #miniNav #closeButton:hover {
+    border: 1px white solid;
+    background: #f58282;
+    color: white;
+  }
+
+  #logo {
+    margin: auto;
+  }
+
+  .miniNavActive {
+    display: flex !important;
+  }
+
+  #logo {
+    margin-left: 0 auto;
+  }
+
+  #wrappedNav {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 55px;
+    cursor: pointer;
+  }
+
+  #wrappedNav:hover {
+    background: rgba(52, 122, 52, 0.6);
+  }
+
+  #wrap {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+  }
+
+  #miniNav {
+    flex-direction: column;
+    position: absolute;
+    z-index: 4;
+    background: white;
+    width: 100%;
+    margin-left: -8px;
+  }
+
+  #miniNav button {
+    margin: 5px auto;
+    width: 60%;
+  }
+
+  hr {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+}
+
+@media all and (max-width: 480px) {
+  #miniNav button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    width: 33.33%;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px #72b97c solid;
+    background: white;
+    color: #72b97c;
+    margin: 2px;
+    font-weight: bold;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  #miniNav #closeButton {
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px #f58282 solid;
+    color: #f58282;
+    transition: all 0.5s;
+    position: absolute;
+    right: 10px;
+  }
+
+  #miniNav button:hover {
+    border: 1px white solid;
+    background: #72b97c;
+    color: white;
+  }
+
+
+  #miniNav #closeButton:hover {
+    border: 1px white solid;
+    background: #f58282;
+    color: white;
+  }
+
+  #logo {
+    margin: auto;
+  }
+
+  .miniNavActive {
+    display: flex !important;
+  }
+
+  #logo {
+    margin-left: 0 auto;
+  }
+
+  #wrappedNav {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 55px;
+    cursor: pointer;
+  }
+
+  #wrappedNav:hover {
+    background: rgba(52, 122, 52, 0.6);
+  }
+
+  #wrap {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+  }
+
+  #miniNav {
+    flex-direction: column;
+    position: absolute;
+    z-index: 4;
+    background: white;
+    width: 100%;
+    margin-left: -8px;
+  }
+
+  #miniNav button {
+    margin: 5px auto;
+    width: 60%;
+  }
+
+  hr {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,42 @@
+<div id="addContent">
+  <h2>Ajouter un restaurant</h2>
+
+  <div id="formContent">
+    <fieldset>
+      <h3>Le restaurant</h3>
+
+      <label for="name">Nom du restaurant:</label>
+      <input type="text" name="name" id="name" [(ngModel)]="nameVal" required />
+      <label for="address">Adresse:</label>
+      <input type="text" name="address" id="address" [(ngModel)]="addressVal" required />
+      <label for="type">Type de cuisine:</label>
+      <input type="text" name="type" id="type" [(ngModel)]="typeVal" required />
+    </fieldset>
+
+    <fieldset id="secondFieldset">
+      <h3>Les coordonnées</h3>
+      <p *ngIf="!checkNewRestaurantCoords()">Cliquez sur l'emplacement du restaurant, sur la carte</p>
+
+      <label for="lat" *ngIf="checkNewRestaurantCoords()">Latitude:</label>
+      <input type="text" *ngIf="checkNewRestaurantCoords()" name="lat" id="lat" [(ngModel)]="latVal" disabled />
+      <label for="lng" *ngIf="checkNewRestaurantCoords()">Longitude:</label>
+      <input type="text" *ngIf="checkNewRestaurantCoords()" name="lng" id="lng" [(ngModel)]="longVal" disabled />
+      
+    </fieldset>
+
+    <fieldset id="thirdFieldset">
+      <h3>Avis</h3>
+
+      <label for="stars">Note sur 5:</label>
+      <input type="number" name="stars" id="stars" min="1" max="5" [(ngModel)]="starsVal" required />
+
+      <label for="comment">Commentaire</label>
+      <textarea name="comment" id="comment" [(ngModel)]="commentVal" required></textarea>
+    </fieldset>
+
+    <button (click)="onAdd()" id="validButton">Ajouter</button>
+
+  </div>
+  
+  <button id="closeButton" (click)="closeToggle()"><i class="fa fa-times"></i></button>
+</div>
